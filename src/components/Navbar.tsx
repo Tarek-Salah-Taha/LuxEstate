@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useLanguage } from "@/i18n/LanguageContext";
 import { Menu, X, Globe } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const { t, toggleLanguage, isRTL } = useLanguage();
@@ -23,18 +24,28 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8">
-          {links.map((link) => (
-            <Link
-              key={link.path}
-              to={link.path}
-              className={`text-sm font-medium tracking-wide transition-colors hover:text-primary ${
-                location.pathname === link.path ? "text-primary" : "text-foreground/80"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
+        <div className="hidden md:flex items-center gap-8 relative">
+          {links.map((link) => {
+            const isActive = location.pathname === link.path;
+            return (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`relative px-3 py-2 text-sm font-medium tracking-wide transition-colors hover:text-primary z-10 ${
+                  isActive ? "text-primary" : "text-foreground/80"
+                }`}
+              >
+                {link.label}
+                {isActive && (
+                  <motion.div
+                    layoutId="navbar-indicator"
+                    className="absolute inset-0 bg-primary/10 rounded-md -z-10"
+                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                  />
+                )}
+              </Link>
+            );
+          })}
           <button
             onClick={toggleLanguage}
             className="flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-primary transition-colors"
@@ -51,31 +62,39 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
-        <div className="md:hidden bg-card border-t border-border animate-fade-in">
-          <div className="container mx-auto px-6 py-4 flex flex-col gap-4">
-            {links.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                onClick={() => setIsOpen(false)}
-                className={`text-sm font-medium py-2 ${
-                  location.pathname === link.path ? "text-primary" : "text-foreground/80"
-                }`}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="md:hidden bg-[#050505]/95 backdrop-blur-xl border-t border-border/20 overflow-hidden"
+          >
+            <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
+              {links.map((link) => (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  onClick={() => setIsOpen(false)}
+                  className={`text-base font-medium py-3 border-b border-border/10 transition-colors ${
+                    location.pathname === link.path ? "text-primary" : "text-foreground/80 hover:text-foreground hover:pl-2"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <button
+                onClick={() => { toggleLanguage(); setIsOpen(false); }}
+                className="flex items-center justify-center gap-2 text-sm font-semibold text-primary py-4 mt-2 bg-primary/10 rounded-lg hover:bg-primary/20 transition-colors"
               >
-                {link.label}
-              </Link>
-            ))}
-            <button
-              onClick={() => { toggleLanguage(); setIsOpen(false); }}
-              className="flex items-center gap-2 text-sm font-medium text-foreground/80 py-2"
-            >
-              <Globe className="w-4 h-4" />
-              {t.nav.language}
-            </button>
-          </div>
-        </div>
-      )}
+                <Globe className="w-5 h-5" />
+                {t.nav.language}
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };

@@ -45,7 +45,7 @@ const Contact = () => {
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                     required
-                    className="w-full bg-secondary text-foreground px-4 py-3 rounded-md border border-border focus:border-primary focus:outline-none text-sm"
+                    className="w-full bg-secondary text-foreground px-4 py-3 rounded-md border border-border focus:border-primary focus:ring-1 focus:ring-primary/30 focus:outline-none text-sm transition-all duration-300"
                   />
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -56,7 +56,7 @@ const Contact = () => {
                       value={form.email}
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
                       required
-                      className="w-full bg-secondary text-foreground px-4 py-3 rounded-md border border-border focus:border-primary focus:outline-none text-sm"
+                      className="w-full bg-secondary text-foreground px-4 py-3 rounded-md border border-border focus:border-primary focus:ring-1 focus:ring-primary/30 focus:outline-none text-sm transition-all duration-300"
                     />
                   </div>
                   <div>
@@ -64,7 +64,7 @@ const Contact = () => {
                     <input
                       value={form.phone}
                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                      className="w-full bg-secondary text-foreground px-4 py-3 rounded-md border border-border focus:border-primary focus:outline-none text-sm"
+                      className="w-full bg-secondary text-foreground px-4 py-3 rounded-md border border-border focus:border-primary focus:ring-1 focus:ring-primary/30 focus:outline-none text-sm transition-all duration-300"
                     />
                   </div>
                 </div>
@@ -75,12 +75,12 @@ const Contact = () => {
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
                     required
                     rows={5}
-                    className="w-full bg-secondary text-foreground px-4 py-3 rounded-md border border-border focus:border-primary focus:outline-none text-sm resize-none"
+                    className="w-full bg-secondary text-foreground px-4 py-3 rounded-md border border-border focus:border-primary focus:ring-1 focus:ring-primary/30 focus:outline-none text-sm resize-none transition-all duration-300"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="bg-primary text-primary-foreground py-3 rounded-md font-semibold text-sm hover:opacity-90 transition-opacity"
+                  className="bg-primary text-primary-foreground py-3 rounded-md font-semibold text-sm tracking-wide hover:bg-gold-light hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/30 transition-all duration-300 block w-full"
                 >
                   {t.contact.send}
                 </button>

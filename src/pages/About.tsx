@@ -43,7 +43,7 @@ const About = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {values.map((v, i) => (
-              <div key={i} className="bg-card border border-border rounded-lg p-8 text-center">
+              <div key={i} className="bg-card border border-border rounded-lg p-8 text-center hover:-translate-y-2 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all duration-300">
                 <v.icon className="w-10 h-10 text-primary mx-auto mb-4" />
                 <h3 className="font-heading text-xl font-bold text-foreground mb-3">{v.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{v.text}</p>
