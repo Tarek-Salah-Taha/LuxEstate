@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# LuxEstate
 
-TODO: Document your project here
+Welcome to LuxEstate project!

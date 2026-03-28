@@ -91,7 +91,7 @@ const PropertyDetail = () => {
               <div className="text-3xl font-heading font-bold text-primary mb-6">${property.price.toLocaleString()}</div>
               <Link
                 to="/contact"
-                className="block w-full bg-primary text-primary-foreground text-center py-3 rounded-md font-semibold text-sm hover:opacity-90 transition-opacity"
+                className="block w-full bg-primary text-primary-foreground text-center py-3 rounded-md font-semibold text-sm tracking-wide hover:bg-gold-light hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300"
               >
                 {t.propertyDetail.schedule}
               </Link>

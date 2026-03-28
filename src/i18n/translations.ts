@@ -100,6 +100,10 @@ export const translations = {
       description: "Let our experts help you discover the perfect home. Schedule a consultation today.",
       button: "Get Started",
     },
+    notFound: {
+      pageNotFound: "Page not found",
+      returnToHome: "Return to Home",
+    },
   },
   ar: {
     nav: {
@@ -131,7 +135,7 @@ export const translations = {
       pageTitle: "من نحن",
       pageSubtitle: "قصتنا",
       title: "إعادة تعريف العقارات الفاخرة",
-      description: "مع أكثر من ١٥ عامًا من الخبرة في العقارات الفاخرة، نربط المشترين المميزين بعقارات استثنائية حول العالم. يضمن فريقنا من المحترفين المتفانين التعامل مع كل معاملة بأقصى قدر من العناية والخبرة.",
+      description: "مع أكثر من 15 عامًا من الخبرة في العقارات الفاخرة، نربط المشترين المميزين بعقارات استثنائية حول العالم. يضمن فريقنا من المحترفين المتفانين التعامل مع كل معاملة بأقصى قدر من العناية والخبرة.",
       description2: "تأسسنا على مبادئ النزاهة والابتكار والخدمة الاستثنائية، ونمونا لنصبح أحد أكثر الأسماء الموثوقة في العقارات الفاخرة. تمتد محفظتنا عبر القارات، وتضم بعضًا من أجمل المساكن والبنتهاوس والعقارات المتاحة.",
       mission: "مهمتنا",
       missionText: "تقديم تجربة عقارية لا مثيل لها تتجاوز التوقعات في كل نقطة اتصال، وربط الناس بالعقارات التي تحول حياتهم.",
@@ -153,11 +157,11 @@ export const translations = {
       message: "رسالتك",
       send: "إرسال الرسالة",
       address: "العنوان",
-      addressValue: "١٢٣ شارع الفخامة، دبي مارينا، الإمارات",
-      phoneValue: "+٩٧١ ٤ ١٢٣ ٤٥٦٧",
+      addressValue: "123 شارع الفخامة، دبي مارينا، الإمارات",
+      phoneValue: "+971 4 123 4567",
       emailValue: "info@luxestate.com",
       hours: "ساعات العمل",
-      hoursValue: "الأحد - الخميس: ٩:٠٠ ص - ٦:٠٠ م",
+      hoursValue: "الأحد - الخميس: 9:00 ص - 6:00 م",
     },
     properties: {
       pageTitle: "عقاراتنا",
@@ -199,6 +203,10 @@ export const translations = {
       title: "اعثر على عقار أحلامك",
       description: "دع خبراءنا يساعدونك في اكتشاف المنزل المثالي. حدد موعدًا للاستشارة اليوم.",
       button: "ابدأ الآن",
+    },
+    notFound: {
+      pageNotFound: "الصفحة غير موجودة",
+      returnToHome: "العودة للرئيسية",
     },
   },
 };
