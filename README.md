@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🏛️ LuxEstate
 
 > An ultra-premium, modern, and immersive Real Estate web application.
@@ -26,3 +27,8 @@ LuxEstate is designed to provide a "glory" experience for high-end property brow
 ## 📜 Copyright
 
 All rights reserved. Designed and developed exclusively for LuxEstate.
+=======
+# LuxEstate
+
+Welcome to LuxEstate project!
+>>>>>>> 93ed99ab2c6763d53946c0df0922aa9087796d66
