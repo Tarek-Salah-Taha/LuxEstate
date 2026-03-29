@@ -21,21 +21,21 @@ const Properties = () => {
   return (
     <Layout>
       {/* Header */}
-      <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-6 text-center">
+      <section className="py-12 md:py-20 bg-secondary">
+        <div className="container mx-auto px-4 md:px-6 text-center">
           <span className="text-primary text-sm font-semibold tracking-[0.2em] uppercase">{t.properties.pageSubtitle}</span>
           <h1 className="font-heading text-5xl font-bold text-foreground mt-3">{t.properties.pageTitle}</h1>
         </div>
       </section>
 
       {/* Filters */}
-      <section className="py-8 border-b border-border">
-        <div className="container mx-auto px-6 flex flex-wrap justify-center gap-3">
+      <section className="py-6 md:py-8 border-b border-border">
+        <div className="container mx-auto px-4 md:px-6 flex flex-wrap justify-center gap-3">
           {filters.map((f) => (
             <button
               key={f.key}
               onClick={() => setFilter(f.key)}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${
+              className={`px-4 sm:px-5 py-2 rounded-full text-sm font-medium transition-colors ${
                 filter === f.key
                   ? "bg-primary text-primary-foreground"
                   : "bg-secondary text-muted-foreground hover:text-foreground"
@@ -48,8 +48,8 @@ const Properties = () => {
       </section>
 
       {/* Grid */}
-      <section className="py-16">
-        <div className="container mx-auto px-6">
+      <section className="py-12 md:py-16">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filtered.map((p) => (
               <PropertyCard key={p.id} property={p} />

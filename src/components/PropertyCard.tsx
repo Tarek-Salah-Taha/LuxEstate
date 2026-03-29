@@ -23,12 +23,12 @@ const PropertyCard = ({ property }: { property: Property }) => {
             </span>
           </div>
         </div>
-        <div className="p-6 flex-1 flex flex-col">
+        <div className="p-5 md:p-6 flex-1 flex flex-col">
           <h3 className="font-heading text-xl font-semibold text-foreground mb-2 group-hover:text-primary transition-colors duration-300">
             {property.title[lang]}
           </h3>
           <p className="text-sm text-muted-foreground mb-5 line-clamp-1">{property.location[lang]}</p>
-          <div className="flex items-center gap-5 text-sm font-medium text-foreground/80 mb-6 bg-secondary/50 rounded-lg p-3 w-fit border border-white/5">
+          <div className="flex items-center gap-3 sm:gap-5 text-sm font-medium text-foreground/80 mb-6 bg-secondary/50 rounded-lg p-3 w-fit border border-white/5">
             {property.beds > 0 && (
               <span className="flex items-center gap-2" title="Bedrooms"><Bed className="w-4 h-4 text-primary" />{property.beds}</span>
             )}

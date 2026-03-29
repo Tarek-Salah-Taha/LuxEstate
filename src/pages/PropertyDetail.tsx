@@ -23,7 +23,7 @@ const PropertyDetail = () => {
   return (
     <Layout>
       {/* Back Link */}
-      <div className="container mx-auto px-6 py-6">
+      <div className="container mx-auto px-4 md:px-6 py-4 md:py-6">
         <Link to="/properties" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
           <ArrowLeft className="w-4 h-4" />
           {t.propertyDetail.backToListings}
@@ -31,15 +31,15 @@ const PropertyDetail = () => {
       </div>
 
       {/* Hero Image */}
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 md:px-6">
         <div className="rounded-lg overflow-hidden aspect-[21/9]">
           <img src={property.image} alt={property.title[lang]} className="w-full h-full object-cover" />
         </div>
       </div>
 
       {/* Content */}
-      <div className="container mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+      <div className="container mx-auto px-4 md:px-6 py-8 md:py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
           {/* Main */}
           <div className="lg:col-span-2">
             <span className="text-primary text-sm font-semibold tracking-wider uppercase">
@@ -49,7 +49,7 @@ const PropertyDetail = () => {
             <p className="flex items-center gap-1 text-muted-foreground mb-8"><MapPin className="w-4 h-4" />{property.location[lang]}</p>
 
             {/* Stats */}
-            <div className="flex gap-8 py-6 border-y border-border mb-8">
+            <div className="flex gap-4 sm:gap-8 py-6 border-y border-border mb-8 justify-between sm:justify-start">
               {property.beds > 0 && (
                 <div className="text-center">
                   <Bed className="w-5 h-5 text-primary mx-auto mb-1" />
@@ -86,7 +86,7 @@ const PropertyDetail = () => {
 
           {/* Sidebar */}
           <div>
-            <div className="bg-card border border-border rounded-lg p-6 sticky top-24">
+            <div className="bg-card border border-border rounded-lg p-5 md:p-6 sticky top-24">
               <div className="text-sm text-muted-foreground mb-1">{t.properties.price}</div>
               <div className="text-3xl font-heading font-bold text-primary mb-6">${property.price.toLocaleString()}</div>
               <Link
@@ -102,8 +102,8 @@ const PropertyDetail = () => {
 
       {/* Similar */}
       {similar.length > 0 && (
-        <section className="py-16 border-t border-border">
-          <div className="container mx-auto px-6">
+        <section className="py-12 md:py-16 border-t border-border">
+          <div className="container mx-auto px-4 md:px-6">
             <h2 className="font-heading text-3xl font-bold text-foreground mb-8">{t.propertyDetail.similar}</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {similar.map((p) => (

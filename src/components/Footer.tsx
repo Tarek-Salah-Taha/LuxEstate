@@ -6,11 +6,11 @@ const Footer = () => {
   const { t } = useLanguage();
 
   return (
-    <footer className="relative bg-[#050505] overflow-hidden text-foreground pt-16 pb-8 border-t border-border/20">
+    <footer className="relative bg-[#050505] overflow-hidden text-foreground pt-12 md:pt-16 pb-8 border-t border-border/20">
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-50" />
 
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 mb-12 md:mb-16">
           {/* Brand */}
           <div className="md:col-span-1">
             <h3 className="text-3xl font-heading font-extrabold text-foreground mb-4">

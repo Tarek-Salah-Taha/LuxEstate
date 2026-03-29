@@ -18,7 +18,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-glass">
-      <div className="container mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="container mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
         <Link to="/" className="text-2xl font-heading font-bold text-gold-gradient">
           LuxEstate
         </Link>
@@ -71,7 +71,7 @@ const Navbar = () => {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="md:hidden bg-[#050505]/95 backdrop-blur-xl border-t border-border/20 overflow-hidden"
           >
-            <div className="container mx-auto px-6 py-6 flex flex-col gap-4">
+            <div className="container mx-auto px-4 md:px-6 py-6 flex flex-col gap-4">
               {links.map((link) => (
                 <Link
                   key={link.path}

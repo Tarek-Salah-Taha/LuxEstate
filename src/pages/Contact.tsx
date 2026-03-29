@@ -24,16 +24,16 @@ const Contact = () => {
   return (
     <Layout>
       {/* Header */}
-      <section className="py-20 bg-secondary">
-        <div className="container mx-auto px-6 text-center">
+      <section className="py-12 md:py-20 bg-secondary">
+        <div className="container mx-auto px-4 md:px-6 text-center">
           <span className="text-primary text-sm font-semibold tracking-[0.2em] uppercase">{t.contact.pageSubtitle}</span>
           <h1 className="font-heading text-5xl font-bold text-foreground mt-3">{t.contact.pageTitle}</h1>
         </div>
       </section>
 
-      <section className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-14">
+      <section className="py-12 md:py-20">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-14">
             {/* Form */}
             <div>
               <h2 className="font-heading text-3xl font-bold text-foreground mb-3">{t.contact.title}</h2>

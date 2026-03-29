@@ -62,7 +62,7 @@ const Index = () => {
           <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-primary/10 to-transparent mix-blend-screen" />
         </motion.div>
 
-        <div className="relative z-10 text-center max-w-5xl mx-auto px-6 mt-16">
+        <div className="relative z-10 text-center max-w-5xl mx-auto px-4 md:px-6 mt-16">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -80,7 +80,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="font-heading text-6xl md:text-8xl lg:text-9xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-white/70 mb-8 leading-[1.05] drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)] tracking-tight"
+            className="font-heading text-6xl md:text-8xl lg:text-9xl font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-white via-white to-white/70 mb-8 leading-[1.05] drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)] tracking-tight py-5"
           >
             {t.hero.title}
           </motion.h1>
@@ -98,7 +98,7 @@ const Index = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
-            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-36"
           >
             <Link
               to="/properties"
@@ -108,7 +108,7 @@ const Index = () => {
               <span className="relative z-10">{t.hero.cta}</span>
               <ArrowRight className="relative z-10 w-5 h-5 group-hover:translate-x-1 rtl:group-hover:-translate-x-1 rtl:rotate-180 transition-transform duration-300" />
             </Link>
-            
+
             <Link
               to="/contact"
               className="bg-white/5 backdrop-blur-xl border border-white/20 text-white px-10 py-5 rounded-2xl font-bold text-sm md:text-base tracking-[0.2em] uppercase hover:bg-white hover:text-black hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(255,255,255,0.15)] transition-all duration-500 flex items-center justify-center w-full sm:w-auto group"
@@ -117,24 +117,11 @@ const Index = () => {
             </Link>
           </motion.div>
         </div>
-        
-        {/* Scroll indicator */}
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5, duration: 1 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-        >
-          <span className="text-white/50 text-xs font-semibold tracking-[0.3em] uppercase">Scroll</span>
-          <div className="w-[1px] h-12 bg-white/20 overflow-hidden relative">
-            <div className="absolute top-0 left-0 w-full h-1/2 bg-primary animate-scroll-down" />
-          </div>
-        </motion.div>
       </section>
 
       {/* Stats */}
       <section className="relative z-20 -mt-24 mb-20">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 bg-card/40 backdrop-blur-2xl border border-white/10 rounded-3xl p-6 md:p-10 shadow-2xl shadow-black/50 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-primary/5 opacity-50" />
             {stats.map((stat, i) => (
@@ -144,7 +131,7 @@ const Index = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1, type: "spring", stiffness: 100 }}
                 key={i}
-                className="relative z-10 p-6 flex flex-col items-center group cursor-default"
+                className="relative z-10 p-4 sm:p-6 flex flex-col items-center group cursor-default"
               >
                 <div className="absolute inset-0 bg-primary/5 rounded-2xl scale-0 group-hover:scale-100 transition-transform duration-500 ease-out" />
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-6 text-primary group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-500 shadow-[0_0_30px_rgba(212,175,55,0.15)] group-hover:shadow-[0_0_40px_rgba(212,175,55,0.4)]">
@@ -161,13 +148,13 @@ const Index = () => {
       </section>
 
       {/* Featured */}
-      <section className="py-32 relative overflow-hidden bg-background">
+      <section className="py-16 md:py-32 relative overflow-hidden bg-background">
         {/* Decorative Background Elements */}
         <div className="absolute top-0 right-[-10%] w-[600px] h-[600px] bg-primary/10 rounded-full blur-[150px] mix-blend-screen pointer-events-none" />
         <div className="absolute bottom-[-10%] left-[-10%] w-[800px] h-[800px] bg-primary/5 rounded-full blur-[150px] mix-blend-screen pointer-events-none" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/20 to-transparent opacity-50 pointer-events-none" />
 
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -187,7 +174,7 @@ const Index = () => {
             </h2>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
             {featured.map((p, i) => (
               <motion.div
                 key={p.id}
@@ -223,24 +210,24 @@ const Index = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-32 relative overflow-hidden">
+      <section className="py-16 md:py-32 relative overflow-hidden">
         <div className="absolute inset-0">
           <img src={heroImage} alt="Luxury Background" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-background/90 backdrop-blur-sm" />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/20 rounded-full blur-[150px] mix-blend-screen" />
         </div>
-        
-        <div className="container mx-auto px-6 relative z-10 max-w-4xl text-center">
+
+        <div className="container mx-auto px-4 md:px-6 relative z-10 max-w-4xl text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 30 }}
             whileInView={{ opacity: 1, scale: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="bg-card/40 backdrop-blur-2xl border border-white/10 p-12 md:p-16 rounded-[2.5rem] shadow-2xl relative overflow-hidden group"
+            className="bg-card/40 backdrop-blur-2xl border border-white/10 p-8 sm:p-12 md:p-16 rounded-[2.5rem] shadow-2xl relative overflow-hidden group"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-            
-            <motion.h2 
+
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -249,8 +236,8 @@ const Index = () => {
             >
               {t.cta.title}
             </motion.h2>
-            
-            <motion.p 
+
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -259,7 +246,7 @@ const Index = () => {
             >
               {t.cta.description}
             </motion.p>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
